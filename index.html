@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>React Pac-Man</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+      body {
+        font-family: 'Press Start 2P', system-ui, sans-serif;
+        background-color: #0f172a;
+        color: white;
+        overflow: hidden; /* Prevent scrolling on mobile */
+      }
+
+      /* Custom Animations */
+      @keyframes chomp {
+        0% { transform: rotate(0deg); }
+        50% { transform: rotate(30deg); }
+        100% { transform: rotate(0deg); }
+      }
+      
+      @keyframes chomp-bottom {
+        0% { transform: rotate(0deg); }
+        50% { transform: rotate(-30deg); }
+        100% { transform: rotate(0deg); }
+      }
+
+      .animate-chomp-top {
+        animation: chomp 0.3s infinite linear;
+        transform-origin: bottom center;
+      }
+
+      .animate-chomp-bottom {
+        animation: chomp-bottom 0.3s infinite linear;
+        transform-origin: top center;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

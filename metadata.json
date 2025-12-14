@@ -1,0 +1,5 @@
+{
+  "name": "React Pac-Man",
+  "description": "A modern, responsive recreation of the classic Pac-Man arcade game using React, TypeScript, and Tailwind CSS. Features include score tracking, power pellets, and mobile-friendly controls.",
+  "requestFramePermissions": []
+}
